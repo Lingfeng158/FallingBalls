@@ -1,0 +1,3 @@
+/Users/lingfengli/Desktop/FallingBalls/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/lingfengli/Desktop/FallingBalls/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/lingfengli/Desktop/FallingBalls/cmake-build-debug/CMakeFiles/FBalls.dir

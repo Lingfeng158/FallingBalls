@@ -1,9 +1,9 @@
 //
 // Created by Lingfeng Li on 8/1/19.
 //
-#include "../include/tmp.h"
 #include <iostream>
+#include "../include/filewriting.h"
 int main(){
-    TMP x;
-    std::cout<<x.toString();
+    Filewriting f("123", "456");
+    f.writeFile("gre.txt");
 }

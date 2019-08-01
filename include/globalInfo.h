@@ -1,0 +1,8 @@
+//
+// Created by Lingfeng Li on 8/1/19.
+//
+
+#ifndef FALLINGBALLS_GLOBALINFO_H
+#define FALLINGBALLS_GLOBALINFO_H
+
+#endif //FALLINGBALLS_GLOBALINFO_H

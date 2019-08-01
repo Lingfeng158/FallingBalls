@@ -6,17 +6,17 @@ ODIR=obj
 
 LIBS=-lm
 
-_DEPS = tmp.h
+_DEPS = filewriting.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o tmp.o
+_OBJ = main.o filewriting.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 $(ODIR)/%.o: %.cpp $(DEPS)
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
-hellomake: $(OBJ)
+FBalls: $(OBJ)
 	$(CXX) -o $@ $^ $(CXXFLAGS) $(LIBS)
 
 .PHONY: clean
