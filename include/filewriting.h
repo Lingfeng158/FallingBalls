@@ -14,7 +14,15 @@ private:
     std::string ending;
 
 public:
+    //ctor
+    Filewriting();
+
+    //alt ctor
     Filewriting(std::string _bkground, std::string _ending);
+
+    void changeBkground(std::string text);
+
+    void changeEnding(std::string text);
 
     ~Filewriting()= default;
 

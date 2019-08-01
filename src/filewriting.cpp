@@ -5,9 +5,19 @@
 #include "../include/filewriting.h"
 #include <fstream>
 
+Filewriting::Filewriting() {}
+
 Filewriting::Filewriting(std::string _bkground, std::string _ending)
 :bkground(_bkground),ending(_ending) {
 
+}
+
+void Filewriting::changeBkground(std::string text) {
+    bkground=text;
+}
+
+void Filewriting::changeEnding(std::string text) {
+    ending=text;
 }
 
 void Filewriting::writeFile(std::string name) {

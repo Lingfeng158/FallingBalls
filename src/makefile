@@ -6,7 +6,7 @@ ODIR=obj
 
 LIBS=-lm
 
-_DEPS = filewriting.h
+_DEPS = filewriting.h globalInfo.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
 _OBJ = main.o filewriting.o
