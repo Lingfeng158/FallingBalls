@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 include_directories(./include)
 # Define the source files and dependencies for the executable
 set(SOURCE_FILES
+        src/pawn.cpp
         src/main.cpp
         src/filewriting.cpp
         )
