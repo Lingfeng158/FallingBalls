@@ -30,7 +30,7 @@ public:
      * wite available data to file given name 'name'
      * @param name the name of file to be written
      */
-    void writeFile(std::string name);
+    void writeFile(std::string name, std::string content);
 
 };
 #endif //FALLINGBALLS_FILEWRITING_H

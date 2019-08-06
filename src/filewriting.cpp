@@ -20,11 +20,11 @@ void Filewriting::changeEnding(std::string text) {
     ending=text;
 }
 
-void Filewriting::writeFile(std::string name) {
+void Filewriting::writeFile(std::string name, std::string content) {
     std::ofstream fd;
     fd.open("../txt/"+name);
     if(fd.is_open()){
-        fd << bkground<<ending;
+        fd << bkground<<content<<ending;
         fd.close();
     }
 }

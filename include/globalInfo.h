@@ -19,4 +19,5 @@ std::string stage_ending = "quit";
 char pawnData[]="sphere 50 150 200 -400 0.418 0.2667 0.107 0.4118 0.2863 0.396  0.2 1 1;sphere 120 100 400 -400 0.28 0.1 0.5 0.005 0.7 0.3 0.5 1 1;;";
 
 const double acceleration=9.80;
+const double dragCoeff=0.47;
 #endif //FALLINGBALLS_GLOBALINFO_H
