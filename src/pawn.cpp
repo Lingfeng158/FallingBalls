@@ -5,16 +5,24 @@
 #include <string>
 #include "../include/pawn.h"
 
+Location::Location(double _x, double _y, double _z)
+:x(_x),y(_y), z(_z){}
+
 Pawn::Pawn(char* _input) {
-    char* tmp=strtok (_input," ");
-    tmp=strtok (NULL," ");
-    r=atoi(tmp);
-    loc.x=atof(strtok (NULL," "));
-    loc.y=atof(strtok (NULL," "));
-    loc.z=atof(strtok (NULL," "));
-    args=strtok (NULL,"");
-    speed=0;
-    resistence=0;
+    if(_input!=NULL){
+        char* tmp=strtok (_input," ");
+        tmp=strtok (NULL," ");
+        r=atoi(tmp);
+        loc.x=atof(strtok (NULL," "));
+        loc.y=atof(strtok (NULL," "));
+        loc.z=atof(strtok (NULL," "));
+        args=strtok (NULL,"");
+        speed=0;
+        resistence=0;
+    }else{
+        args="Error in initialization";
+    }
+
 }
 
 char* Pawn::getArgs() const{
@@ -57,9 +65,9 @@ std::string Pawn::toString() const {
 }
 
 std::ostream& operator<<(std::ostream &osObj, const Pawn &rhs) {
-    osObj<<"The current location of the sphere is"<<rhs.getLoc()<<std::endl;
-    osObj<<"The current speed of the sphere is :"<<rhs.getSpeed()<<std::endl;
-    osObj<<"The current resistance of the sphere is "<<rhs.getRes()<<std::endl;
+    osObj<<"The current location of the sphere is: "<<rhs.getLoc()<<std::endl;
+    osObj<<"The current speed of the sphere is: "<<rhs.getSpeed()<<std::endl;
+    osObj<<"The current resistance of the sphere is: "<<rhs.getRes()<<std::endl;
     return osObj;
 }
 

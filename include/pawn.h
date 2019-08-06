@@ -11,6 +11,8 @@ public:
     double x;
     double y;
     double z;
+    Location()= default;
+    Location(double _x, double _y, double _z);
 
 friend std::ostream& operator<<(std::ostream & osObj, const Location& rhs);
 std::string toString();
@@ -31,7 +33,7 @@ private:
     Location loc;
     //volume of current obj
     double r;
-    //air resistence of obj
+    //air resistence force of obj
     double resistence;
     //all properties of sphere other than location
     char* args;

@@ -9,5 +9,6 @@ set(SOURCE_FILES
         src/pawn.cpp
         src/main.cpp
         src/filewriting.cpp
+        src/action.cpp
         )
 add_executable(FBalls ${SOURCE_FILES})

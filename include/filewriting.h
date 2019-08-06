@@ -27,10 +27,12 @@ public:
     ~Filewriting()= default;
 
     /**
-     * wite available data to file given name 'name'
-     * @param name the name of file to be written
+     * write available data to file for image creation
+     * @param name to be saved as txt
+     * @param content to be written in file
+     * @param nameOfImg to output image
      */
-    void writeFile(std::string name, std::string content);
+    void writeFile(std::string name, std::string content, std::string nameOfImg);
 
 };
 #endif //FALLINGBALLS_FILEWRITING_H

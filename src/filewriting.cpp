@@ -20,11 +20,11 @@ void Filewriting::changeEnding(std::string text) {
     ending=text;
 }
 
-void Filewriting::writeFile(std::string name, std::string content) {
+void Filewriting::writeFile(std::string name, std::string content, std::string nameOfImg) {
     std::ofstream fd;
     fd.open("../txt/"+name);
     if(fd.is_open()){
-        fd << bkground<<content<<ending;
+        fd << bkground<<content<<"trace\ntiffwrite ../Images/"<<nameOfImg<<std::endl<<ending;
         fd.close();
     }
 }

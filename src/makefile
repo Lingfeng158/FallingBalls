@@ -6,10 +6,10 @@ ODIR=obj
 
 LIBS=-lm
 
-_DEPS = filewriting.h globalInfo.h pawn.h
+_DEPS = filewriting.h globalInfo.h pawn.h action.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o filewriting.o pawn.o
+_OBJ = main.o filewriting.o pawn.o action.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
