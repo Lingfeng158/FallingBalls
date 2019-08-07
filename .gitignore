@@ -1,3 +1,5 @@
 .DS_Store
 .idea
+txt/*.txt
+Images/*.tif
 cmake-build-debug

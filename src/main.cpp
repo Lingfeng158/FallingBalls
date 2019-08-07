@@ -44,7 +44,8 @@ int main(){
         std::string content="";
         for(int i=0;i<actors.size();i++){
             content+=actors[i].toString();
-            std::cout<<"actor "<<i<<" at iteration"<< timeCounter<<std::endl<<actors[i];
+            //info for debugging
+            // std::cout<<"actor "<<i<<" at iteration"<< timeCounter<<std::endl<<actors[i];
         }
         fd.writeFile(std::to_string(timeCounter)+".txt", content,std::to_string(timeCounter)+".tif");
 
