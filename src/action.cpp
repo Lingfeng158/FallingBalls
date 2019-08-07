@@ -55,7 +55,7 @@ bool Action::touchDown(Pawn &actor) {
         if(abs(actor.getSpeed()/velocityMultiplier)<1)
             actor.changeSpeed(0);
         else
-            actor.changeSpeed(-actor.getSpeed());
+            actor.changeSpeed(-actor.getSpeed()*bouncingCoeff);
         return true;
     }else
         return false;
