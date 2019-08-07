@@ -17,6 +17,7 @@ private:
     double timeLapsePace;
     const double acceleration=9.80;
     const double dragCoeff=0.47;
+    const double velocityMultiplier=20.0;
 public:
     Action( double _pace);
 

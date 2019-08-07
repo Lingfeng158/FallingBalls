@@ -24,7 +24,13 @@ void Filewriting::writeFile(std::string name, std::string content, std::string n
     std::ofstream fd;
     fd.open("../txt/"+name);
     if(fd.is_open()){
-        fd << bkground<<content<<"trace\ntiffwrite ../Images/"<<nameOfImg<<std::endl<<ending;
+        int length=nameOfImg.length();
+        std::string placeholder="";
+        while(length<8){
+            placeholder+='0';
+            length+=+1;
+        }
+        fd << bkground<<content<<"trace\ntiffwrite ../Images/"<<placeholder<<nameOfImg<<std::endl<<ending;
         fd.close();
     }
 }

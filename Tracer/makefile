@@ -6,17 +6,17 @@ ODIR=obj
 
 LIBS=-lm
 
-_DEPS = filewriting.h globalInfo.h pawn.h action.h
-DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+#_DEPS = filewriting.h globalInfo.h pawn.h action.h
+#DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o filewriting.o pawn.o action.o
+_OBJ = main.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 $(ODIR)/%.o: %.cpp $(DEPS)
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
-FBallStage: $(OBJ)
+FBallRender: $(OBJ)
 	$(CXX) -o $@ $^ $(CXXFLAGS) $(LIBS)
 
 .PHONY: clean
