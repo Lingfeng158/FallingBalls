@@ -42,9 +42,9 @@ void createImg(std::vector<std::string> dirList, int procNo=0, int totalProc=1){
     int dividedSize=totalSize/totalProc+1;
     for(int index=procNo*dividedSize;index<(procNo+1)*dividedSize;index++){
         if(index<totalSize){
-            std::cout<<"from thread NO: "<<procNo<<std::endl;
             std::string cmd="../Tracer/tracer read ../txt/"+ (dirList[index]);
             std::system(cmd.c_str());
+            std::cout<<"from thread NO: "<<procNo<<std::endl;
         }
     }
 //    for(std::vector<std::string>::iterator it=a.begin();it!=a.end();it++){
