@@ -65,7 +65,14 @@ int main(int argc, char** argv){
     for(int i=0;i<maxThread-1;i++){
         threads.push_back(std::thread(createImg, a, i, maxThread));
     }
-    createImg(a, maxThread-1, maxThread);
+    try{
+        createImg(a, maxThread-1, maxThread);
+    }catch(...){
+        for(auto& t:threads)
+            t.join();
+        throw;
+    }
+
     for(auto& t:threads)
         t.join();
     //create video.mp4 at parent folder
